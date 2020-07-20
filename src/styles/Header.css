@@ -1,0 +1,22 @@
+.HeaderContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh);
+}
+.HeaderContainer .contentWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: 0  0;
+    backface-visibility: hidden;
+}
+.HeaderContainer .logoTitle{
+    padding: 8px;
+}
+.HeaderContainer .logoTitle span{
+    color: white;
+    font-size: 48px;
+    opacity: 0;
+    visibility: hidden;
+}

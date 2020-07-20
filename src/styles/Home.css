@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap');
+
+.HomeContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.HomeContainer p.Tagline{
+    font-family: 'Merriweather', serif;
+    width: 50%;
+    font-size: 28px;
+    color: white;
+    padding: 16px;
+    margin: 16px;
+}
+.HomeContainer .GetStarted{
+    display: inline-flex;
+    width: max-content;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.HomeContainer .GetStarted button{
+    border: none;
+    background-color: #0079ff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 24px;
+    width: max-content;
+    align-self: center;
+    padding: 12px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    backface-visibility: hidden;
+}

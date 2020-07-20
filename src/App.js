@@ -1,24 +1,55 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import {Switch, Route, useLocation} from "react-router-dom"
+import {AnimatePresence, motion} from 'framer-motion'
+import Bread from './components/Bread';
+import Sauce from './components/Sauce';
+import Topping from './components/Topping';
+import Extra from './components/Extra';
+import Pay from './components/Pay';
+import Home from './components/Home';
+import Header from './components/Header';
 
 function App() {
+  const [bread, setBread] = useState("");
+  const location = useLocation();
+  const [displayRoutes, setDisplayRoutes] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App"
+    >
+      <Header setDisplayRoutes={setDisplayRoutes}/>
+      {
+        displayRoutes
+        ?
+        (
+          <>
+            <AnimatePresence exitBeforeEnter>
+              <Switch location={location} key={location.key}>
+                <Route path={["/breads", "/bread"]}>
+                  <Bread bread={bread} setBread={setBread}/>
+                </Route>
+                <Route path={["/sauces", "/sauce"]}>
+                  <Sauce />
+                </Route>
+                <Route path={["/toppings", "/topping"]}>
+                  <Topping />
+                </Route>
+                <Route path={["/extras", "/extra"]}>
+                  <Extra />
+                </Route>
+                <Route path={["/pay"]}>
+                  <Pay />
+                </Route>
+                <Route path={["/home", "/"]}>
+                  <Home />
+                </Route>
+              </Switch>
+            </AnimatePresence>
+          </>
+        )
+        :
+        null
+      }
     </div>
   );
 }

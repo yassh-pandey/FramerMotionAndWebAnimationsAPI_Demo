@@ -1,0 +1,63 @@
+.BreadContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.BreadContainer .title{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    font-size: 48px;
+}
+.BreadContainer ul{
+    list-style: none;
+}
+.BreadContainer ul .listItem{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px;
+}
+.BreadContainer ul li{
+    color: white;
+    padding: 16px;
+    position: relative;
+    font-size: 20px;
+    margin-left: 8px;
+    backface-visibility: hidden;
+}
+.BreadContainer ul .radioBtn{
+    display: inline-flex;
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+}
+.selected{
+    display: inline-flex;
+    position: absolute;
+    background-color: green;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    top: 3.5px;
+    right: 3.5px;
+}
+.BreadContainer .nextBtn{
+    background-color: #fc8019;
+    color: white;
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 2px;
+    padding: 12px 36px;
+    margin-top: 16px;
+    cursor: pointer
+}
+.animateListItemOnSelect{
+    color: rgb(225, 173, 1)!important;
+    transform: scale(1.1)!important; 
+}
