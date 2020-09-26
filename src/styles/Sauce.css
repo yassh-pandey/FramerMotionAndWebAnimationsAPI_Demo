@@ -1,7 +1,8 @@
 .sauceContainer{
     display: flex;
     justify-content: center;
-    align-items: center;flex-direction: column;
+    align-items: center;
+    flex-direction: column;
 }
 .sauceContainer .sauceTitle{
     font-size: 48px;

@@ -2,6 +2,9 @@ import React, {useRef, useEffect} from 'react'
 import '../styles/Header.css'
 
 function Header({setDisplayRoutes}) {
+    let contentWrapperRef = useRef().current;
+    let logoTitleRef = useRef().current;
+    let headerContainerRef = useRef().current;
     useEffect(()=>{
         const pathLength = contentWrapperRef.childNodes[0].childNodes[0].getTotalLength();
         const animatePathLength = contentWrapperRef.childNodes[0].childNodes[0].animate([
@@ -81,11 +84,7 @@ function Header({setDisplayRoutes}) {
                })
              })
         });
-    }, [])
-    let contentWrapperRef = useRef().current;
-    let logoTitleRef = useRef().current;
-    let headerContainerRef = useRef().current;
-
+    }, [contentWrapperRef, headerContainerRef, logoTitleRef, setDisplayRoutes])
 
     return (
         <div className="HeaderContainer"

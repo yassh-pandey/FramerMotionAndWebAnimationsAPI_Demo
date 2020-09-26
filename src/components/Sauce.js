@@ -43,11 +43,14 @@ function Sauce() {
     ]
     const sauceContainerVariants = {
         initial: {
+            opacity: 0
         },
         final: {
+            opacity: 1,
             transition: {
                 when: "beforeChildren",
-                staggerChildren: 0.5
+                staggerChildren: 0.5,
+                duration: 2
             }
         },
         exit: {
@@ -61,7 +64,7 @@ function Sauce() {
         variants={sauceContainerVariants}
         className="sauceContainer"
         >
-              <img src={redChilli} style={{width: "120px", height: "100%", background: "white", borderRadius: "50%"}}/>
+            <img alt={"red chilli"} src={redChilli} style={{width: "120px", height: "100%", background: "white", borderRadius: "50%"}}/>
              <div className="sauceTitle">
                         Choice of <span style={{fontStyle: "italic"}}>sauce</span>(any 3):
             </div>

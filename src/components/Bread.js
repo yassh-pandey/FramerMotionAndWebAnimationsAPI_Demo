@@ -6,7 +6,7 @@ function Bread({bread, setBread}) {
     const breadRefs = useRef([]).current;
     useEffect(()=>{
         setBread("");
-    }, [])
+    }, [setBread])
     const breads = [
         {
             name: "Multigrain Bread",
@@ -33,7 +33,7 @@ function Bread({bread, setBread}) {
             id: "Flat Bread"
         }
     ];
-    const [selectedList, setSelectedList] = useState(Array(breads.length).fill(false));
+    const [,setSelectedList] = useState(Array(breads.length).fill(false));
     const breadContainerVariant = {
         final: {
             transition: {
