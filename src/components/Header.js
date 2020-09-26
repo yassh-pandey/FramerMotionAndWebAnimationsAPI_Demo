@@ -4,13 +4,6 @@ import '../styles/Header.css'
 function Header({setDisplayRoutes}) {
     useEffect(()=>{
         const pathLength = contentWrapperRef.childNodes[0].childNodes[0].getTotalLength();
-        // contentWrapperRef.childNodes[0].animate([
-        //     {opacity: 0},
-        //     {opacity: 1}
-        // ],{
-        //     duration: 1000,
-        //     ease:"easeIn"
-        // });
         const animatePathLength = contentWrapperRef.childNodes[0].childNodes[0].animate([
             {
                 strokeDasharray: pathLength,
@@ -50,13 +43,13 @@ function Header({setDisplayRoutes}) {
                 const boundingClientRect = contentWrapperRef.getBoundingClientRect();
                 const headerFinalAnimation = contentWrapperRef.animate([
                    {
-                       transform: `translate3D(0px, 0px, 0px),`
+                       transform: `translate3d(0px, 0px, 0px)`
                    },
                    {
-                        transform: `translate3D(  0px ,  -${boundingClientRect.y}px , 0px)`
+                        transform: `translate3d(  0px ,  -${boundingClientRect.y}px , 0px)`
                    },
                    {
-                        transform: `translate3D( -${boundingClientRect.x}px ,  -${boundingClientRect.y}px , 0px)`
+                        transform: `translate3d( -${boundingClientRect.x}px ,  -${boundingClientRect.y}px , 0px)`
                    }
                ],{
                    duration: 1500,

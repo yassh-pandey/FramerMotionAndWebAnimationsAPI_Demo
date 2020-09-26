@@ -1,6 +1,7 @@
 import React from 'react'
 import {motion} from "framer-motion"
 import '../styles/Sauce.css'
+import redChilli from "../assets/chilli.svg"
 function Sauce() {
     const sauces = [
         {
@@ -58,8 +59,19 @@ function Sauce() {
     return (
         <motion.div
         variants={sauceContainerVariants}
+        className="sauceContainer"
         >
-
+              <img src={redChilli} style={{width: "120px", height: "100%", background: "white", borderRadius: "50%"}}/>
+             <div className="sauceTitle">
+                        Choice of <span style={{fontStyle: "italic"}}>sauce</span>(any 3):
+            </div>
+            {
+                sauces.map(sauce=>(
+                        <div className="sauceItem" key={sauce.id} id={sauce.id}>
+                            {sauce.name}
+                        </div>
+                ))
+            }
         </motion.div>
     )
 }
