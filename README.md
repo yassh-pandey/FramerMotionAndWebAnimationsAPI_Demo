@@ -1,5 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
+# Note: I was trying out declarative aminations using framer motion and the new Web Animations API. So this is just a sample test application and is not finished to completion. Keep that in mind when you see the source code or visit the working demo.
 
+# Link to working demo:
+- https://wonderful-nightingale-4afd96.netlify.app
 ## Available Scripts
 
 In the project directory, you can run:
